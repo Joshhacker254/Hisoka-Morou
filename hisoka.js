@@ -93,7 +93,7 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
 	    if (setting) {
 	    if (!('anticall' in setting)) setting.anticall = true
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = false
+		if (!('autobio' in setting)) setting.autobio = true
 		if (!('templateImage' in setting)) setting.templateImage = true
 		if (!('templateVideo' in setting)) setting.templateVideo = false
 		if (!('templateGif' in setting)) setting.templateGif = false
@@ -102,7 +102,7 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
 	    } else global.db.data.settings[botNumber] = {
 	    anticall: true,
 		status: 0,
-		autobio: false,
+		autobio: true,
 		templateImage: true,
 		templateVideo: false,
 		templateGif: false,
